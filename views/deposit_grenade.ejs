@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+</head>
+<body>
+    <div id="Head">
+        <div><img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBoRwu43u4DYEbIl9QM3Sajwl4XdXkWNmofuXHnwE0&s"></div>
+        <div><h1>Grenade Deposit</h1></div>
+        <div><img id="AC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Image">
+        <center><h3 id="time"></h3></center></div></div> 
+        <script>
+            let time=document.getElementById("time")
+            setInterval(()=> {
+                let d=new Date()
+                time.innerHTML=d.toLocaleTimeString()
+            },1000)
+        </script>
+        <div id="body">
+            <form action="/grenade" method="post" class="box">
+                <section class="box" ><div id="container"><h3 id="user">Enter Details</h3><br>
+                  <label for="mp_id">Military Personnel ID:</label><br>
+                  <input type="int" id="mp_id" name="mp_id" placeholder="Enter Id"><br>
+                  <label for="grenade">Type of grenade:</label><br>
+                  <input type="text" id="grenade" name="grenade" placeholder="Enter type of grenade"><br>
+                  <label for="serial">Serial No.:</label><br>
+                  <input type="int" id="serial" name="serial" placeholder="Enter Serial No."><br>
+                  <button id="submit" name="submit">Submit</button> 
+                </div>
+              </section>
+            </form>
+        </div>   
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+#AC {
+    height: 14vh;
+    animation: rotation 5s linear infinite;
+    width: 14vh;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+#logo {
+    height: 17vh;
+    width: 10vw;
+    background: transparent;
+}
+#Head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+}
+label {
+  font-size: 150%;
+  background: transparent;
+}
+h1 {
+    display: grid;
+    place-items: center;  
+    height: 17vh;
+    width: 80vw;
+    font-size: 7vh;
+    background-color: rgba(236, 239, 211, 0.911);
+}
+#body {
+    display: grid;
+    place-items: center;
+    height: 85vh;
+    background-image: url("https://img.freepik.com/free-vector/indian-republic-day-tricolor-theme-watercolor-texture-background-vector_1055-11985.jpg?w=2000");
+    background-size: cover;
+}
+.box {
+  display:grid;
+  place-items: center;
+  background: transparent;
+}
+#container {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: rgb(15, 14, 14);
+  height: 50vh;
+  width: 30vw;
+}
+#user {
+  font-size: 200%;
+  background: transparent;
+}
+input[type="int"],
+input[type="text"] {
+  height: 5vh;
+  width: 75%;
+  background: rgb(239, 216, 150);
+}
+button {
+  background: transparent;
+  height: 5vh;
+  width: 5vw;
+}
+</style>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <div id="Head">
+        <div><img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBoRwu43u4DYEbIl9QM3Sajwl4XdXkWNmofuXHnwE0&s"></div>
+        <div><h1>Update Personnel Profile</h1></div>
+        <div><img id="AC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Image">
+        <center><h3 id="time"></h3></center></div></div> 
+        <script>
+            let time=document.getElementById("time")
+            setInterval(()=> {
+                let d=new Date()
+                time.innerHTML=d.toLocaleTimeString()
+            },1000)
+        </script>
+        <div id="body"><div id="container">
+            <form action="/Update_personnel" method="post" class="box">
+                <section class="box" ><h3 id="user">Enter Details</h3><br><br>
+                  <p><label for="mp_id">Personnel ID:</label>
+                  <input type="int" id="mp_id" name="mp_id" placeholder="Enter Id">
+                  <label for="batallion_no">Batallion No.:</label>
+                  <input type="int" id="batallion_no" name="batallion_no" placeholder="Enter batallion no."></p><br>
+                  <label for="name">Name:</label><br>
+                  <input type="text" id="name" name="name" placeholder="Enter name"><br>
+                  <label for="address">Address:</label><br>
+                  <input type="text" id="address" name="address" placeholder="Enter address"><br><br>
+                  <p><label for="bdate">DOB:</label>
+                  <input type="date" id="bdate" name="bdate" placeholder="Enter date of birth">
+                  <label for="mobile">Mobile No.:</label>
+                  <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile"></p><br>
+                  <p><label for="sex">Sex: </label><input type="radio" id="male" name="sex"> Male <input type="radio" id="female" name="sex"> Female</p><br>
+                  <label for="dname">Dependent's Name:</label><br>
+                  <input type="int" id="dname" name="dname" placeholder="Enter name"><br>
+                  <button id="submit" name="submit">Submit</button> 
+                </section>
+              </form>
+            </div>
+        </div>   
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+#AC {
+    height: 14vh;
+    animation: rotation 5s linear infinite;
+    width: 14vh;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+#logo {
+    height: 17vh;
+    width: 10vw;
+    background: transparent;
+}
+#Head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+}
+label {
+  font-size: 150%;
+  background: transparent;
+}
+label[for="mp_id"],
+label[for="batallion_no"],
+label[for="bdate"],
+label[for="mobile"],
+label[for="sex"] {
+  font-size: 120%;
+}
+h1 {
+    display: grid;
+    place-items: center;  
+    height: 17vh;
+    width: 80vw;
+    font-size: 7vh;
+    background-color: rgba(236, 239, 211, 0.911);
+}
+#body {
+    display: grid;
+    place-items: center;
+    height: 85vh;
+    background-image: url("https://img.freepik.com/free-vector/indian-republic-day-tricolor-theme-watercolor-texture-background-vector_1055-11985.jpg?w=2000");
+    background-size: cover;
+}
+.box {
+  display:grid;
+  place-items: center;
+  background: transparent;
+}
+#container {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: rgb(15, 14, 14);
+  height: 90vh;
+  width: 40vw;
+}
+#user {
+  font-size: 200%;
+  background: transparent;
+}
+input[type="int"], 
+input[type="text"], 
+input[type="date"],
+input[type="tel"] {
+  height: 5vh;
+  width: 75%;
+  background: rgb(239, 216, 150);
+}
+#mp_id,
+#batallion_no,
+#bdate,
+#mobile,
+#gear_serial,
+#no_gear {
+  height: 5vh;
+  width: 25%;
+  background: rgb(239, 216, 150);
+} 
+button {
+  background: transparent;
+  height: 5vh;
+  width: 5vw;
+}
+</style>
+</html>

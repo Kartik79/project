@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <title>Records</title>
+</head>
+<body>
+    <div id="Head">
+    <div><img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBoRwu43u4DYEbIl9QM3Sajwl4XdXkWNmofuXHnwE0&s"></div>
+    <div><h1 id="dash">Records</h1></div>
+    <div><img id="AC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Image">
+    <center><h3 id="time"></h3></center></div>
+   </div>
+    <div id="box"><span id="return"><a id="home" href="/dash">Home</a></span><div class="containers1">
+        <a href="guns_view"><div class="items" id="i1"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Pistol_used_by_%22Squeaky%22_Fromme.JPG" style="height: 20vh; width: 18vw;"><center><h2>Guns</h2></center></div></a>
+        <a href="/grenade_view"><div class="items" id="i2"><img src="https://qph.cf2.quoracdn.net/main-qimg-b0fba6c0a1aa4126b800088fba0eaf03-lq" style="height: 20vh; width: 18vw;"><center><h2>Grenades</h2></center></div></a>
+        <a href="/gear_view"><div class="items" id="i3"><img src="https://5.imimg.com/data5/RH/PC/MY-14597838/army-bullet-proof-jacket-500x500.jpg" style="height: 20vh; width: 18vw;"><center><h2>Safety-Gears</h2></center></div></a></div>
+        <div class="containers2">
+        <a href="/ammunition_view"><div class="items" id="i4"><img src="https://cdn.hswstatic.com/gif/innovations-modern-bullet-1-orig.jpg" style="height: 20vh; width: 18vw;"><center><h2>Ammunitions</h2></center></div></a>
+        <a href="/withdrawal_view"><div class="items" id="i5"><img src="https://www.gannett-cdn.com/-mm-/7aeec14176ecb3e18738d11f5f57bfe44c2b0d02/c=408-78-2999-1542/local/-/media/2016/07/15/USATODAY/USATODAY/636042049649805553-XXX-THORTON-CONEALED-GUNS-11213-82637750.JPG"" style="height: 20vh; width: 18vw;"><center><h2>Withdrawal</h2></center></div></a>
+        <a href="/personnel_view"><div class="items" id="i6"><img src="https://www.shutterstock.com/image-illustration/illustration-profile-icon-avatar-indonesian-260nw-2096873599.jpg" style="height: 20vh; width: 18vw;"><center><h2>Personnel Profile</h2></center></div></a></div></div>
+<script>
+    let time=document.getElementById("time")
+    setInterval(()=> {
+        let d=new Date()
+        time.innerHTML=d.toLocaleTimeString()
+    },1000)
+</script>
+</body>
+<style>* {
+    margin: 0;
+    padding: 0;
+}
+#AC {
+    height: 14vh;
+    animation: rotation 5s linear infinite;
+    width: 14vh;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+#logo {
+    height: 17vh;
+    width: 10vw;
+    background: transparent;
+}
+#Head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+}
+#dash {
+    display: grid;
+    place-items: center;  
+    height: 17vh;
+    width: 80vw;
+    font-size: 7vh;
+    background-color: rgba(236, 239, 211, 0.911);
+}
+#box {
+    display: grid;
+    place-items: center;
+    height: 85vh;
+    background-image: url("https://img.freepik.com/free-vector/indian-republic-day-tricolor-theme-watercolor-texture-background-vector_1055-11985.jpg?w=2000");
+    background-size: cover;
+}
+.containers1 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+.containers2 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+#return {
+    display: flex;
+    justify-content: right;
+    height: 3vh;
+    width: 100%;
+}
+#home {
+    display: grid;
+    place-items: center;
+    width: 6vw;
+    height: 5vh;
+    background-color: grey;
+    margin-right: 1vh;
+    color: white;
+}
+.items {
+    background: white;
+    margin: 0vh 3vh 3vh 3vh;
+    height: 30vh;
+    width: 18vw;
+    overflow: hidden;
+    color: black;
+}
+.items:hover {
+    opacity: 0.5;
+} </style>
+</html>

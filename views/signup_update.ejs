@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <title>Signup/Update</title>
+</head>
+<body>
+    <div id="Head">
+    <div><img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBoRwu43u4DYEbIl9QM3Sajwl4XdXkWNmofuXHnwE0&s"></div>
+    <div><h1 id="dash">Signup/Update</h1></div>
+    <div><img id="AC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Image">
+    <center><h3 id="time"></h3></center></div>
+   </div>
+    <div id="box"><span id="return"><a id="home" href="/dash">Home</a></span><div class="containers1">
+        <a href="/signup"><div class="items" id="i1"><img src="https://img.favpng.com/10/11/5/computer-icons-user-profile-symbol-png-favpng-TgL30gNDRtTQCdaK7dMXqE2LJ.jpg" style="height: 20vh; width: 18vw;"><center><h2>Signup</h2></center></div></a>
+        <a href="/Update_personnel"><div class="items" id="i2"><img src="https://thumbs.dreamstime.com/b/update-stamp-label-square-grunge-sign-182114350.jpg" style="height: 20vh; width: 18vw;"><center><h2>Update - Military Personnel</h2></center></div></a>
+<script>
+    let time=document.getElementById("time")
+    setInterval(()=> {
+        let d=new Date()
+        time.innerHTML=d.toLocaleTimeString()
+    },1000)
+</script>
+</body>
+<style>* {
+    margin: 0;
+    padding: 0;
+}
+#AC {
+    height: 14vh;
+    animation: rotation 5s linear infinite;
+    width: 14vh;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+#logo {
+    height: 17vh;
+    width: 10vw;
+    background: transparent;
+}
+#Head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+}
+#dash {
+    display: grid;
+    place-items: center;  
+    height: 17vh;
+    width: 80vw;
+    font-size: 7vh;
+    background-color: rgba(236, 239, 211, 0.911);
+}
+#box {
+    display: grid;
+    place-items: center;
+    height: 85vh;
+    background-image: url("https://img.freepik.com/free-vector/indian-republic-day-tricolor-theme-watercolor-texture-background-vector_1055-11985.jpg?w=2000");
+    background-size: cover;
+}
+.containers1 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+.items {
+    background: white;
+    margin: 5vh;
+    height: 30vh;
+    width: 18vw;
+    overflow: hidden;
+    color: black;
+}
+.items:hover {
+    opacity: 0.5;
+} 
+#return {
+    display: flex;
+    justify-content: right;
+    height: 3vh;
+    width: 100%;
+}
+#home {
+    display: grid;
+    place-items: center;
+    width: 6vw;
+    height: 5vh;
+    background-color: grey;
+    margin-right: 1vh;
+    color: white;
+}
+</style>
+</html>
